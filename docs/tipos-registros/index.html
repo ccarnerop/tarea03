@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Carlos Carnero" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Tipos de registros - DNS</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Tipos de registros";
+        var mkdocs_page_input_path = "tipos-registros.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> DNS
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Inicio</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../que-es-dns/">¿Qué es un DNS?</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../resolucion-dns/">Resolución de nombres</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">Tipos de registros</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#registro-a">Registro A</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#registro-aaaa">Registro AAAA</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#registro-cname">Registro CNAME</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#registro-mx">Registro MX</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#registro-ns">Registro NS</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#registro-txt">Registro TXT</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#registro-ptr">Registro PTR</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#ejemplo-de-zona-dns">Ejemplo de zona DNS</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#importancia-de-los-registros-dns">Importancia de los registros DNS</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">DNS</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Tipos de registros</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="tipos-de-registros-dns">Tipos de registros DNS</h1>
+<p>Existen diferentes tipos de registros DNS, según su utilidad.</p>
+<hr />
+<h2 id="registro-a">Registro A</h2>
+<p>Relaciona un dominio con una dirección IPv4.</p>
+<p>Ejemplo:</p>
+<pre><code class="language-text">example.com → 192.168.1.10
+</code></pre>
+<hr />
+<h2 id="registro-aaaa">Registro AAAA</h2>
+<p>Relaciona un dominio con una dirección IPv6.</p>
+<p>Ejemplo:</p>
+<pre><code class="language-text">example.com → 2001:db8::1
+</code></pre>
+<hr />
+<h2 id="registro-cname">Registro CNAME</h2>
+<p>Define un alias para otro dominio.</p>
+<p>Ejemplo:</p>
+<pre><code class="language-text">www.example.com → example.com
+</code></pre>
+<hr />
+<h2 id="registro-mx">Registro MX</h2>
+<p>Indica los servidores encargados del correo electrónico.</p>
+<p>Ejemplo:</p>
+<pre><code class="language-text">mail.example.com
+</code></pre>
+<hr />
+<h2 id="registro-ns">Registro NS</h2>
+<p>Define los servidores DNS autoritativos del dominio.</p>
+<hr />
+<h2 id="registro-txt">Registro TXT</h2>
+<p>Permite almacenar información textual.</p>
+<p>Suele utilizarse para:</p>
+<ul>
+<li>SPF</li>
+<li>DKIM</li>
+<li>Verificación de dominios</li>
+</ul>
+<hr />
+<h2 id="registro-ptr">Registro PTR</h2>
+<p>Se utiliza para resolución inversa.</p>
+<p>Ejemplo:</p>
+<pre><code class="language-text">192.168.1.10 → example.com
+</code></pre>
+<hr />
+<p><img alt="Tipos de registros DNS" src="../images/dns-registros.png" /></p>
+<h2 id="ejemplo-de-zona-dns">Ejemplo de zona DNS</h2>
+<pre><code class="language-dns">example.com.     IN  A      192.168.1.10
+www              IN  CNAME  example.com.
+mail             IN  MX     10 mail.example.com.
+</code></pre>
+<hr />
+<h2 id="importancia-de-los-registros-dns">Importancia de los registros DNS</h2>
+<p>Los registros DNS permiten:</p>
+<ul>
+<li>Publicar páginas web.</li>
+<li>Gestionar correo electrónico.</li>
+<li>Organizar dominios.</li>
+<li>Configurar servicios de red.</li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../resolucion-dns/" class="btn btn-neutral float-left" title="Resolución de nombres"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../resolucion-dns/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

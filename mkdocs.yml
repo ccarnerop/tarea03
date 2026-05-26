@@ -1,0 +1,15 @@
+site_name: DNS
+site_author: Carlos Carnero
+
+docs_dir: 'md'
+site_dir: 'docs'
+
+theme:
+  name: readthedocs
+  language: es
+
+nav:
+  - Inicio: index.md
+  - ¿Qué es un DNS?: que-es-dns.md
+  - Resolución de nombres: resolucion-dns.md
+  - Tipos de registros: tipos-registros.md
