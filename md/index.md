@@ -8,17 +8,17 @@ El sistema **DNS (Domain Name System)** es una de las tecnologías fundamentales
 
 Su función principal consiste en traducir nombres de dominio fáciles de recordar en direcciones IP utilizadas por los equipos para comunicarse.
 
-Por ejemplo:
+???- example "Por ejemplo:"
 
-```text
-www.google.com
-```
+    ```text
+    www.google.com
+    ```
 
-Se transforma en:
+    Se transforma en:
 
-```text
-142.250.184.196
-```
+    ```text
+    142.250.184.196
+    ```
 
 ---
 
@@ -51,18 +51,24 @@ Cuando un usuario introduce una dirección web:
 
 Ejemplo:
 
-```text
-www.ejemplo.com
-```
+```mermaid
+graph TD
 
-| Parte | Función |
-|---|---|
-| www | Subdominio |
-| ejemplo | Dominio |
-| .com | Dominio de nivel superior |
+A["www.ejemplo.com"]
+
+A --> B["www"]
+A --> C["ejemplo"]
+A --> D[".com"]
+
+B --> E["Subdominio"]
+C --> F["Dominio principal"]
+D --> G["TLD<br>(Top Level Domain)"]
+
+G --> H["Dominio de nivel superior"]
+```
 
 ---
 
-## Importancia del DNS
+!!! tip "Importancia del DNS"
 
-El DNS es imprescindible para el funcionamiento de Internet moderno y permite que millones de servicios puedan localizarse de manera rápida y eficiente.
+    El DNS es imprescindible para el funcionamiento de Internet moderno y permite que millones de servicios puedan localizarse de manera rápida y eficiente.

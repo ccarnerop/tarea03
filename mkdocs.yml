@@ -5,8 +5,54 @@ docs_dir: 'md'
 site_dir: 'docs'
 
 theme:
-  name: readthedocs
+  name: material
   language: es
+
+  features:
+    - navigation.tabs
+    - navigation.top
+  palette:
+
+    # Modo claro
+    - scheme: default
+      primary: blue
+      accent: light blue
+      toggle:
+        icon: material/weather-night
+        name: Cambiar a modo oscuro
+
+      # Modo oscuro
+    - scheme: slate
+      primary: blue
+      accent: light blue
+      toggle:
+        icon: material/weather-sunny
+        name: Cambiar a modo claro
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
+plugins:
+  - search
+
+  - page-to-pdf:
+      disable: false
+
+  #- pdf-export:
+   #   combined: true
+      #output_path: 'pdf'
+      #toc_level: 2-4
+      #cover_template: 'cover.html'
+      #title_template: 'title.html'
+      #footer_template: 'footer.html'
+
 
 nav:
   - Inicio: index.md
